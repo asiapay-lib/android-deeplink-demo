@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AsiaPay Deeplink Demo</string>
+    <string name="paydollar_domain">test.paydollar.com/b2cDemo</string>
+    <string name="paydollar_mid">560200401</string>
+    <string name="paydollar_currcode">344</string>
+    <string name="paydollar_amount">15</string>
+    <string name="paydollar_orderref">2018102409220001</string>
+    <string name="paydollar_securehash">bd987ab12f0c973470805993a0b2c1a972b8398b</string>
+</resources>
