@@ -62,6 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return true;
                 } else {
                     // the following part is to handle the deeplink call
+                    
+                    // the following code is only whitelist alipay and octopus, you can add other deeplink scheme to support other app 2 app applications
+                    
+                    // comment the following conditional for allow all applications
+                    // ************************************************************* //
+                    // checking start
+                    // ************************************************************* //
+                    if (!(url.startsWith("octopus") || url.startsWith("alipay"))) {
+                        return false;
+                    }
+                    // ************************************************************* //
+                    // checking end
+                    // ************************************************************* //
 
                     // check the url can handle or not
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
