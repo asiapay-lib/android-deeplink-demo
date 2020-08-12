@@ -1,3 +1,26 @@
+#### PaySdk Library :-
+
+- [Android](https://github.com/asiapay-lib/paysdk-android-lib)
+
+- [iOS](https://github.com/asiapay-lib/paysdk-ios-lib)
+
+#### PaySdk Demo Application :-
+
+- [Android](https://github.com/asiapay-lib/paysdk-android-demo)
+
+- [iOS](https://github.com/asiapay-lib/paysdk-ios-demo)
+
+
+
+
+
+
+
+
+
+
+
+
 # Android Deeplink Handle Demo
 
 Demo project for android webview to handle deep link call at our payment page
