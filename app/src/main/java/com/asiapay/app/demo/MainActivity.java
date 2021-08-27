@@ -54,13 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "-------URL LOAD------");
                 Log.d(TAG, url);
 
-                if (URLUtil.isNetworkUrl(url)) {
-                    return false;
-                }
-
-                if (url.startsWith("https:") || url.startsWith("http:")) {
-                    return true;
-                } else {
+                if (!(url.startsWith("https:") || url.startsWith("http:"))) {
                     // the following part is to handle the deeplink call
                     
                     // the following code is only whitelist alipay and octopus, you can add other deeplink scheme to support other app 2 app applications
@@ -89,7 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         return true;
                     }
 
-                    return false;
+                    return super.shouldOverrideUrlLoading(view, url);
+                } else {
+                    return super.shouldOverrideUrlLoading(view, url);
                 }
             }
         });
