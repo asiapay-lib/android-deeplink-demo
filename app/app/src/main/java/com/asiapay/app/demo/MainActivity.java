@@ -30,12 +30,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
 
         // build the payment url
-        testUrl = "https://" + getString(R.string.paydollar_domain) + "/eng/payment/payForm.jsp?secureHash="
+        testUrl = "https://www.paydollar.com";
+        /*testUrl = "https://" + getString(R.string.paydollar_domain) + "/eng/payment/payForm.jsp?secureHash="
                 + getString(R.string.paydollar_securehash) + "&amount="
                 + getString(R.string.paydollar_amount) + "&currCode="
                 + getString(R.string.paydollar_currcode) + "&payType=N&orderRef="
                 + getString(R.string.paydollar_orderref) + "&merchantId="
-                + getString(R.string.paydollar_mid);
+                + getString(R.string.paydollar_mid);*/
 
         // initialize ui
         setContentView(R.layout.activity_main);
@@ -56,15 +57,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (!(url.startsWith("https:") || url.startsWith("http:"))) {
                     // the following part is to handle the deeplink call
-                    
+
                     // the following code is only whitelist alipay and octopus, you can add other deeplink scheme to support other app 2 app applications
                     // comment the following conditional for allow all applications
                     // ************************************************************* //
                     // checking start
                     // ************************************************************* //
-                    if (!(url.startsWith("octopus://") || 
-                          url.startsWith("octopusapp://") ||
-                         url.startsWith("alipay://"))) {
+                    if (!(url.startsWith("octopus://") ||
+                            url.startsWith("octopusapp://") ||
+                            url.startsWith("alipay://") ||
+                            url.startsWith("ewabocpay://"))) {
                         return false;
                     }
                     // ************************************************************* //
