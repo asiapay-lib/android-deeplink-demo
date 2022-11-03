@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
 
         // build the payment url
-        testUrl = "https://www.paydollar.com";
+        testUrl = "https://www.paydollar.com/b2c2/eng/payment/testPay.html";
+//        testUrl = "https://www.paydollar.com";
         /*testUrl = "https://" + getString(R.string.paydollar_domain) + "/eng/payment/payForm.jsp?secureHash="
                 + getString(R.string.paydollar_securehash) + "&amount="
                 + getString(R.string.paydollar_amount) + "&currCode="
